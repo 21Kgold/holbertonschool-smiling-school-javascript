@@ -191,35 +191,14 @@
 .quotes {
   height: 392px;
   background-color: var(--main-color);
+  color: var(--color-white);
+  font-size: 22px;
 }
 
 .quotes .carousel-item img {
   width: 160px;
   border-radius: 75px;
   margin-left: 10px;
-}
-
-.quote-text {
-  padding-left: 53px;
-}
-
-.quotes .row [class*="col"] {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.quote-text p {
-  font-size: 22px;
-  line-height: 34px;
-  margin-bottom: 22px;
-}
-
-.quote-text h4 {
-  font-size: 22px;
-}
-.quote-text span {
-  font-style: italic;
-  font-size: 22px;
 }
 
 .carousel-control-prev img,
@@ -235,20 +214,6 @@
   padding-left: var(--quotes-arrows-pad);
 }
 
-@media screen and (max-width: 991px) {
-  .quotes .carousel-item img {
-    margin-left: 80px;
-  }
-  .quote-text {
-    padding-left: 43px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .quotes .carousel-item img {
-    margin-left: 40px;
-  }
-}
 
 @media screen and (max-width: 575px) {
   :root {
@@ -257,13 +222,6 @@
   }
   .quotes {
     height: auto;
-  }
-  .quotes .carousel-item img {
-    margin: 90px auto 0 auto;
-    padding-bottom: 10px;
-  }
-  .quotes .carousel-item .quote-text {
-    padding-bottom: 103px;
   }
 
   .quotes .carousel-control-prev.arrow-left {
@@ -274,11 +232,6 @@
   .quotes .carousel-control-next.arrow-right {
     bottom: var(--arrow-move-y);
     right: var(--arrow-move-x);
-  }
-
-  .quote-text {
-    padding: 0px;
-    padding-top: 24px;
   }
 }
 
