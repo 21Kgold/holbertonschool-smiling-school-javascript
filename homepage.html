@@ -122,7 +122,7 @@
     </header>
     <main class="main">
 
-      <!-- QUOTES SECTION START -->
+      <!-- Dynamic loading quotes carousel -->
       <section class="quotes d-flex align-items-center">
         <div class="container">
         <div
@@ -162,57 +162,53 @@
         </div>
       </div>
       </section>
-      <!-- QUOTES SECTION END -->
 
-      <!-- POPULAR TUTORIALS SECTION START -->
-      <section class="tutorial-section">
-        <h2 class="text-dark text-center font-weight-light section-title">
-          Most
-          <span class="purple-text font-weight-bold">popular</span> tutorials
-        </h2>
-
-        <div class="container-md">
+      <!-- Dynamic loading popular videos carousel -->
+      <section class="popular section d-flex align-items-center">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="text-center">
+              Most
+              <span class="main-color">popular</span> tutorials
+            </h2>
+          </header>
           <div
-            id="videosCarouselControls"
+            id="videosCarouselControls2"
             class="carousel slide"
             data-ride="carousel"
           >
-            <div class="videos-slides-container">
-              <div class="carousel-inner text-center">
-                <div id="VideosLoader" class="loader"></div>
-                <div id="tutorialvideos" class="d-flex"></div>
-              </div>
+            <div id="tutorialvideos" class="carousel-inner">
+              <div id="VideosLoader" class="loader"></div>
             </div>
-
             <a
-              class="carousel-control-prev"
-              href="#videosCarouselControls"
+              class="carousel-control-prev arrow-left"
+              href="#carouselExampleControls2"
               role="button"
               data-slide="prev"
             >
-              <span
-                class="holberton_school-icon-arrow_4 text-dark display-1"
+              <img
+                src="images/arrow_black_left.png"
+                alt="Quote Previous"
                 aria-hidden="true"
-              ></span>
+              />
               <span class="sr-only">Previous</span>
             </a>
             <a
-              class="carousel-control-next"
-              href="#videosCarouselControls"
+              class="carousel-control-next arrow-right"
+              href="#carouselExampleControls2"
               role="button"
               data-slide="next"
             >
-              <span
-                class="holberton_school-icon-arrow_3 text-dark display-1"
+              <img
+                src="images/arrow_black_right.png"
+                alt="Quote Next"
                 aria-hidden="true"
-              ></span>
+              />
               <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
       </section>
-      <!-- POPULAR TUTORIALS SECTION END -->
-
       <section class="smiles section">
         <div class="container">
           <header class="section-header">
@@ -276,54 +272,51 @@
         </div>
       </section>
 
-      <!-- LATEST TUTORIALS SECTION START -->
-      <section class="tutorial-section">
-        <h2 class="text-dark text-center font-weight-light section-title">
-          <span class="purple-text font-weight-bold">Latest</span> videos
-        </h2>
-
-        <div class="container-md">
+      <!-- Dynamic loading latest videos carousel -->
+      <section class="popular section d-flex align-items-center">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="text-center">
+              <span class="main-color">Latest</span> videos
+            </h2>
+          </header>
           <div
-            id="videosCarouselControls"
+            id="carouselExampleControls3"
             class="carousel slide"
             data-ride="carousel"
           >
-            <div class="videos-slides-container">
-              <div class="carousel-inner text-center">
-                <div id="LVideosLoader" class="loader"></div>
-                <div id="latestvideos" class="d-flex"></div>
-              </div>
+            <div id="latestvideos" class="carousel-inner">
+              <div id="LVideosLoader" class="loader"></div>
             </div>
-
             <a
-              class="carousel-control-prev"
-              href="#videosCarouselControls"
+              class="carousel-control-prev arrow-left"
+              href="#carouselExampleControls3"
               role="button"
               data-slide="prev"
             >
-              <span
-                class="holberton_school-icon-arrow_4 text-dark display-1"
+              <img
+                src="images/arrow_black_left.png"
+                alt="Quote Previous"
                 aria-hidden="true"
-              ></span>
+              />
               <span class="sr-only">Previous</span>
             </a>
             <a
-              class="carousel-control-next"
-              href="#videosCarouselControls"
+              class="carousel-control-next arrow-right"
+              href="#carouselExampleControls3"
               role="button"
               data-slide="next"
             >
-              <span
-                class="holberton_school-icon-arrow_3 text-dark display-1"
+              <img
+                src="images/arrow_black_right.png"
+                alt="Quote Next"
                 aria-hidden="true"
-              ></span>
+              />
               <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
       </section>
-      <!-- LATEST TUTORIALS SECTION START -->
-
     </main>
     <footer class="footer d-flex align-items-center justify-content-center">
       <div class="container">
