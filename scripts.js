@@ -193,7 +193,7 @@ $(document).ready(function () {
         }
       },
   });
-    
+
     $.ajax({
         url: "https://smileschool-api.hbtn.info/courses",
         type: "get",
@@ -207,18 +207,18 @@ $(document).ready(function () {
         },
         success: function (response) {
           $("#CoursesLoader").hide();
-          let $t = response.topics;
+          let array_topics = response.topics;
           $("#topic-menu-container")
             .append(`<button class="btn btn-secondary border-0 rounded-0 search-element w-100 text-left" type="button" id="current-topic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ${$t[0].substr(0, 1).toUpperCase() + $t[0].substr(1)}
+                        ${array_topics[0].substr(0, 1).toUpperCase() + array_topics[0].substr(1)}
                       </button>
                       <div class="dropdown-menu" id="topic-menu" aria-labelledby="topic-menu-container"></div>`);
           let $topics = "";
-          for (let i = 0; i < $t.length; i++) {
+          for (let i = 0; i < array_topics.length; i++) {
             $topics += `<button data-value="${
-              $t[i]
+              array_topics[i]
             }" class="dropdown-item" type="button">${
-              $t[i].substr(0, 1).toUpperCase() + $t[i].substr(1)
+              array_topics[i].substr(0, 1).toUpperCase() + array_topics[i].substr(1)
             }</button>`;
           }
           $("#topic-menu").append($topics);
@@ -286,7 +286,7 @@ $(document).ready(function () {
         },
     });
     
-    $.displayCourses = function ($q, $t, $s) {
+    $.displayCourses = function ($q, array_topics, $s) {
         $.ajax({
           url: "https://smileschool-api.hbtn.info/courses",
           type: "get",
@@ -295,7 +295,7 @@ $(document).ready(function () {
             list: "search",
             format: "json",
             q: $q,
-            topic: $t,
+            topic: array_topics,
             sort: $s,
           },
           beforeSend: function () {
@@ -304,8 +304,8 @@ $(document).ready(function () {
           success: function (response) {
             $("#CoursesLoader").hide();
             let $c = response.courses;
-            $("#coursesvideos").empty();
-            $("#numberofvideos").text(
+            $("#results-items").empty();
+            $("#results-count").text(
               `${$c.length === 1 ? "1 video" : $c.length + " videos"}`
             );
             for (let i = 0; i < $c.length; i++) {
@@ -344,7 +344,7 @@ $(document).ready(function () {
                                         </div>
                                     </div>
                                 </div>`);
-              $("#coursesvideos").append($html);
+              $("#results-items").append($html);
             }
           },
         });
